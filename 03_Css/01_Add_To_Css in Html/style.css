@@ -1,0 +1,10 @@
+p,span,i {
+    color: green;
+}
+/* .class1,.class2,p,i,span{
+    color: blueviolet;
+} */
+
+#frst,#second,h1{
+    color: red;
+}

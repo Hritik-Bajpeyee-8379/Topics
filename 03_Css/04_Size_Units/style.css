@@ -1,0 +1,23 @@
+/* div{
+    font-size: 10px;
+}
+div h1{
+    font-size: 2em;
+} */
+
+/* html{
+    font-size: 33px;
+}
+h1{
+    font-size: 5rem;
+} */
+html{
+    height: 100000px;
+}
+div{
+    height: 100000px;
+    width: 100vw;
+
+    
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi7liZZN4rxy_hvF8YxWuQza4vBxc1QIJcxQ&s") space center ;
+}

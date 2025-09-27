@@ -1,0 +1,33 @@
+Simple ATM Machine (Console-based)
+
+
+
+Requirements:
+
+Start with a variable balance = 1000.
+
+Show a menu:
+
+1 → Check Balance
+
+2 → Deposit
+
+3 → Withdraw
+
+4 → Exit
+
+Use readline in Node.js (like you did in the guessing game).
+
+Based on user input:
+
+If they choose 1, print the balance.
+
+If 2, ask how much to deposit, add to balance, and show new balance.
+
+If 3, ask how much to withdraw:
+
+If withdrawal ≤ balance → subtract and show new balance.
+
+Else → show "Insufficient funds!".
+
+If 4, exit with "Goodbye!"
