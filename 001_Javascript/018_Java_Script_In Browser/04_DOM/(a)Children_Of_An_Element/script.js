@@ -1,0 +1,69 @@
+//**1.ACCESING Children 
+
+//*(a) Direct Children
+console.log(document.body.children);
+//out - HTMLCollection(4) [h1, p, ul, script]
+
+//*(b) Access first child
+console.log(document.body.children[0]);
+//out - <h1>​Welcome​</h1>​
+
+//*(c) Access Second child
+console.log(document.body.children[1]);
+//out - <p>This is a <b>Paragraph</b></p>
+
+//*(d) Access Third child
+console.log(document.body.children[2]);
+//out - <ul> <li>Apple</li> <li>Mango</li> </ul>
+
+//*(f) Access Fourth child
+console.log(document.body.children[4]);
+//out - undefined
+
+//*(g) Access First child
+console.log(document.body.firstChild);
+//out - #text ,.......
+console.log(document.body.firstElementChild);
+//out - <h1>Welcome</h1>
+
+//*(h) Access Last child
+console.log(document.body.lastChild);
+//out - <script src="script.js"></script>
+console.log(document.body.lastElementChild);
+//out - <script src="script.js"></script>
+
+
+//*(i)ChildNodes
+console.log(document.body.childNodes)
+//out -NodeList(8) [text, h1, text, p, text, ul, text, script]
+
+
+//** 2 DESCENNDENTS
+
+//*(a)
+
+console.log(document.querySelector("p"));
+//out -     <li>Apple</li>  <li>Mango</li>
+
+console.log(document.querySelectorAll("li"));
+//out - NodeList(4) [li, li, li, li]
+
+
+//**3 PARENT NODE-
+
+console.log(document.querySelector("li").parentElement);
+//out - ul
+
+//**4 Silblings
+
+let sib = document.querySelectorAll("li")[1];
+//out <li>Mango</li>
+
+//* (a) Next Sibling
+console.log(sib.nextElementSibling);
+//out - <li>Gauava</li>
+
+//* (b) Previous Sibling
+console.log(sib.previousElementSibling);
+//out -  <li>Apple</li>  
+
