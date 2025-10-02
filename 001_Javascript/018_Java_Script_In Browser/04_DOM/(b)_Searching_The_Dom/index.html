@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="id">
+        <h1><b>The Favourite car Of user</b></h1>
+    </div>
+
+    <div class="Favxar">
+        <ul class="lst">
+            <!-- List items will be dynamically added here -->
+        </ul>
+
+        <!-- Input field for the user to type car name -->
+        <input type="text" name="ent" placeholder="Add Your Car">
+
+        <!-- Button to confirm input -->
+        <button id="txt">Confirm</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        //=============================
+        // 1. Get element by ID
+        //=============================
+        let id = document.getElementById("id");
+        id.style.backgroundColor = "aqua"; // Set header background color
+        id.style.color = "red";             // Set header text color
+
+        //=============================
+        // 2. Get elements by class name
+        //=============================
+        let cname = document.getElementsByClassName("set1"); // currently empty in HTML
+
+        // Convert existing elements' text to uppercase
+        for (let el of cname) {
+            let upper = el.innerText.toUpperCase();
+            el.innerText = upper;
+        }
+        // Note: If cname has elements, their text is converted to uppercase
+
+        //=============================
+        // 3. Get elements by tag name
+        //=============================
+        let btn = document.getElementsByTagName("button"); // get all buttons
+        let frstbtn = btn[0]; // first button
+        frstbtn.style.color = "red"; // set button text color
+
+        //=============================
+        // 4. Get elements by name attribute
+        //=============================
+        let name = document.getElementsByName("ent"); // input field
+
+        name[0].style.backgroundColor = "yellow"; // highlight input background
+        name[0].style.color = "red";               // input text color
+
+        //=============================
+        // 5. Query selector for list
+        //=============================
+        let ul = document.querySelector(".lst"); // <ul> where <li> will be added
+
+        // Add click event to the button
+        frstbtn.addEventListener("click", () => {
+            let txt = name[0].value; // get current input value
+            let li = document.createElement("li"); // create new list item
+            li.classList.add("set");               // add class for styling or future reference
+            li.textContent = txt.toUpperCase();   // convert input to uppercase for consistency
+
+            // Get all existing <li> elements with class "set"
+            let licheck = document.querySelectorAll(".set");
+            console.log(licheck); // debug: see all current <li> elements
+
+            // Check for duplicates
+            for (let el of licheck) {
+                if (el.textContent === txt.toUpperCase()) {
+                    console.log(el); // debug: show duplicate element
+                    alert("Can't Place Same Car Name Twice"); // alert user
+                    name[0].value = ""; // clear input
+                    return; // stop function to prevent adding duplicate
+                }
+            }
+
+            // If no duplicate, append new <li> to the list
+            ul.append(li);
+            name[0].value = ""; // clear input for next entry
+        });
+    </script>
+</body>
+
+</html>
