@@ -14,4 +14,3 @@ div.innerHTML = "<h2>Simple Line</h2>"
 
 
 div.outerHTML="<Section> <h1> New </h1> </Section>"
- 

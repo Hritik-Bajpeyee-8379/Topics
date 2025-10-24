@@ -1,0 +1,18 @@
+.mar{
+    height: 70px;
+    width: 50px;
+    background-color: aqua;
+}
+.mar1{
+    height: 70px;
+    width: 50px;
+    background-color: red;
+}
+
+/*** 1. Margin and Padding */
+/*
+.mar{
+/** [top right bottom left]
+    margin: 20px; /*out - give all side margin 20px
+}
+*/
